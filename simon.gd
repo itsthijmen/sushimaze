@@ -8,7 +8,7 @@ var wasabi=1
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:	
  var input=Vector2.ZERO
-  
+ 
  if Input.is_action_pressed("ui_left"):
   input.x-=1
  if Input.is_action_pressed("ui_right"):
@@ -24,6 +24,8 @@ func _physics_process(delta: float) -> void:
  velocity.y=input.y*speed*wasabi
  
  move_and_slide()
+
+
 
  if input != Vector2.ZERO:
   if input.x>0:
