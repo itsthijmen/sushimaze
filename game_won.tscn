@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1n1wrs4ac55y"]
+
+[ext_resource type="Script" uid="uid://dg0inrlyv75sk" path="res://quit.gd" id="1_glrca"]
+
+[node name="game won" type="Node"]
+
+[node name="won" type="Label" parent="."]
+offset_left = 252.0
+offset_top = 152.0
+offset_right = 353.0
+offset_bottom = 175.0
+text = "YOU WON!!!!!"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 263.0
+offset_top = 188.0
+offset_right = 342.0
+offset_bottom = 220.0
+text = "Quit
+"
+script = ExtResource("1_glrca")
+
+[connection signal="pressed" from="quit" to="quit" method="_on_pressed"]
