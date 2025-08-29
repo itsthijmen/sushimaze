@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/image="uid://28ea4mvvbihb"
 config/icon="uid://28ea4mvvbihb"
 
+[autoload]
+
+Global="res://global.gd"
+
 [display]
 
 window/size/viewport_width=640

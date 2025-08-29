@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dys5ykwscrgyc"]
+
+[ext_resource type="Script" uid="uid://cdvvgjrtka7e8" path="res://button.gd" id="1_ugjck"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 271.0
+offset_top = 134.0
+offset_right = 350.0
+offset_bottom = 157.0
+text = "you lost ) :"
+
+[node name="try again" type="Button" parent="."]
+offset_left = 271.0
+offset_top = 164.0
+offset_right = 348.0
+offset_bottom = 195.0
+text = "try again"
+script = ExtResource("1_ugjck")
+
+[connection signal="pressed" from="try again" to="try again" method="_on_pressed"]

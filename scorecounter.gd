@@ -1,22 +1,17 @@
 extends Label
-var score=0
+var scene = load("res://won.tscn")
+var instance = scene.instantiate()
+
+var score=1000
 @onready var sushi=$"sushi eat"
 @onready var won=$"won2"
 
 func _on_sushi_body_entered(_body: Node2D) -> void:
-	score+=1
+	score+=100
 	text=str(score)
 	sushi.play()
-	if score==10:
-		var timer=Timer.new()
-		add_child(timer)
-		timer.wait_time=4
-		timer.one_shot=true
-		timer.start()
-		won.play()
-		await timer.timeout
-		get_tree().change_scene_to_file("res://game_won.tscn")
-		
+	if score==1000:
+		add_child(instance)
 		won.play()
 		
 		

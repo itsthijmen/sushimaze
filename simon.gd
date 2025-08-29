@@ -1,5 +1,6 @@
 extends CharacterBody2D
-
+var scene = load("res://lost.tscn")
+var instance = scene.instantiate()
 var speed=100
 var wasabi=1
 @onready var weehee=$"wasabifest sound"
@@ -43,17 +44,13 @@ pass
 
 
 func _on_timer_timeout() -> void:
- var timer=Timer.new()
- add_child(timer)
- timer.wait_time=3.2
- timer.one_shot=true
- timer.start()
+ add_child(instance)
  l.play()
- await timer.timeout
- get_tree().change_scene_to_file("res://game lose.tscn")
+ 
  pass # Replace with function body.
 
 
+@warning_ignore("unused_parameter")
 func _on_wasabi_fest_body_entered(body: Node2D) -> void:
  wasabi=2
  weehee.play()

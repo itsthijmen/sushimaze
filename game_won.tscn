@@ -12,11 +12,11 @@ offset_bottom = 175.0
 text = "YOU WON!!!!!"
 
 [node name="quit" type="Button" parent="."]
-offset_left = 263.0
-offset_top = 188.0
-offset_right = 342.0
-offset_bottom = 220.0
-text = "Quit
+offset_left = 253.0
+offset_top = 183.0
+offset_right = 353.0
+offset_bottom = 215.0
+text = "Next level->
 "
 script = ExtResource("1_glrca")
 
