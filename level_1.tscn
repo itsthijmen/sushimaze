@@ -1385,7 +1385,7 @@ playback_type = 1
 
 [node name="Simon" type="CharacterBody2D" parent="."]
 z_index = 4
-position = Vector2(-61.9999, 606)
+position = Vector2(51, 47)
 scale = Vector2(0.966258, 1.04886)
 script = ExtResource("2_pa30b")
 metadata/_edit_group_ = true
