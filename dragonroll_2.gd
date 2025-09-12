@@ -13,8 +13,8 @@ func _ready():
 	print(e)
 func _on_timer_timeout():
 	var target = Vector2(
-		randf_range(1160, 1160),
-		randf_range(1460, 1460)
+		randf_range(1160, 1730),
+		randf_range(1150, 1470)
 	)
 
 	# Maak een nieuwe tween aan (Godot 4 manier)
