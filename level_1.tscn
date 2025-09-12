@@ -2386,11 +2386,13 @@ wait_time = 0.085
 script = ExtResource("19_ia5ws")
 
 [node name="Label5" type="Label" parent="."]
-offset_left = 65.0
-offset_top = 1636.0
-offset_right = 176.0
-offset_bottom = 1659.0
-text = "           ???"
+offset_left = 617.0
+offset_top = 2110.0
+offset_right = 908.0
+offset_bottom = 2185.0
+text = "Thank you for playtesting my game!
+if you think need to make new levels, 
+please set that in the reviews! ( :"
 
 [connection signal="timeout" from="Simon/timer(screen)/Timer" to="Simon" method="_on_timer_timeout"]
 [connection signal="finished" from="Simon/wasabiboogie" to="Simon" method="_on_wasabiboogie_finished"]
