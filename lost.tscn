@@ -1,22 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://dys5ykwscrgyc"]
+[gd_scene load_steps=3 format=3 uid="uid://dys5ykwscrgyc"]
 
+[ext_resource type="Script" uid="uid://c12cfkumpl72x" path="res://lost.gd" id="1_6lv0o"]
 [ext_resource type="Script" uid="uid://cdvvgjrtka7e8" path="res://button.gd" id="1_ugjck"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_6lv0o")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 271.0
-offset_top = 134.0
-offset_right = 350.0
-offset_bottom = 157.0
+offset_left = 101.0
+offset_top = 74.0
+offset_right = 180.0
+offset_bottom = 97.0
 text = "you lost ) :"
 
 [node name="try again" type="Button" parent="."]
-offset_left = 271.0
-offset_top = 164.0
-offset_right = 348.0
-offset_bottom = 195.0
+offset_left = 40.0
+offset_top = 106.0
+offset_right = 241.0
+offset_bottom = 178.0
 text = "try again"
 script = ExtResource("1_ugjck")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(151, 127)
+zoom = Vector2(3, 3)
 
 [connection signal="pressed" from="try again" to="try again" method="_on_pressed"]

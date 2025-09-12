@@ -1,0 +1,113 @@
+[gd_scene load_steps=15 format=3 uid="uid://b2wcga2m2fwbd"]
+
+[ext_resource type="Texture2D" uid="uid://dyse3qhli3qk4" path="res://skeleton-dance-animated-game-sprite-set-vector.jpg" id="1_k7r4q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iytdc"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(0, 0, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjnn6"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(320, 0, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk52j"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(640, 0, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssr3o"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(960, 0, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuhj8"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(0, 326, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xljt"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(320, 326, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqei3"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(640, 326, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03g5a"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(960, 326, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bupie"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(0, 652, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qi8i"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(320, 652, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0jh3"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(640, 652, 320, 326)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5wkx"]
+atlas = ExtResource("1_k7r4q")
+region = Rect2(960, 652, 320, 326)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ice4r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iytdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjnn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk52j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssr3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vuhj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xljt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqei3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03g5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bupie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qi8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0jh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5wkx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="you won!!!" type="Node2D"]
+
+[node name="you won" type="Label" parent="."]
+offset_left = 272.0
+offset_top = 106.0
+offset_right = 464.0
+offset_bottom = 155.0
+text = "YOU WON!!!!"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(323, 278)
+scale = Vector2(0.5375, 0.51227)
+sprite_frames = SubResource("SpriteFrames_ice4r")
+autoplay = "default"
+frame_progress = 0.667945

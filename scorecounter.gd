@@ -1,21 +1,31 @@
 extends Label
-var scene = load("res://won.tscn")
-var instance = scene.instantiate()
 
-var score=1000
-@onready var sushi=$"sushi eat"
+
+var score=0
+
 @onready var won=$"won2"
 
 func _on_sushi_body_entered(_body: Node2D) -> void:
 	score+=100
 	text=str(score)
-	sushi.play()
-	if score==1000:
-		add_child(instance)
-		won.play()
+	
 		
 		
 		
 		
 
 pass # Replace with function body.
+
+
+func _on_soy_body_entered(body: Node2D) -> void:
+	if body.name == "Simon":
+		score+=200
+		text=str(score)
+	pass # Replace with function body.
+
+
+func _on_chopsticks_body_entered(body: Node2D) -> void:
+	if body.name == "Simon":
+		score+=500
+		text=str(score)
+	pass # Replace with function body.

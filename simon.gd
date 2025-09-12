@@ -3,9 +3,16 @@ var scene = load("res://lost.tscn")
 var instance = scene.instantiate()
 var speed=100
 var wasabi=1
+var score=0
+@onready var song_1=$wasabiboogie
+@onready var song_3=$"3rd song"
+@onready var song_2=$"2nd song" 
 @onready var weehee=$"wasabifest sound"
 @onready var a=$simonanimated2D
 @onready var l=$AudioStreamPlayer2D
+@onready var soy=$soysound
+@onready var won=$"score/won2"
+@onready var timer=$"timer(screen)/Timer"
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:	
  var input=Vector2.ZERO
@@ -44,7 +51,7 @@ pass
 
 
 func _on_timer_timeout() -> void:
- add_child(instance)
+ get_tree().change_scene_to_file("res://lost.tscn")
  l.play()
  
  pass # Replace with function body.
@@ -52,7 +59,63 @@ func _on_timer_timeout() -> void:
 
 @warning_ignore("unused_parameter")
 func _on_wasabi_fest_body_entered(body: Node2D) -> void:
- wasabi=2
  weehee.play()
+ wasabi=wasabi+1
 
+ pass # Replace with function body.
+
+
+
+func _on_sushi_3_body_entered(body: Node2D) -> void:
+ score+=100
+ if score==1000:
+  won.play()
+  position.x=1245
+  position.y=175
+  timer.start()
+ pass # Replace with function body.
+
+
+func _on_timer_2_timeout() -> void:
+ position.x=2210
+ position.y=195
+ won.play()
+ timer.start()
+ pass # Replace with function body.
+
+
+
+ # Replace with function body.
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+ timer.start(600)
+ wasabi=1
+ pass # Replace with function body.
+
+
+func _on_soy_body_entered(body: Node2D) -> void:
+ if body.name == "Simon":
+  score+=200
+ pass # Replace with function body.
+
+
+func _on_chopsticks_body_entered(body: Node2D) -> void:
+ if body.name == "Simon":
+  score+=500
+ pass # Replace with function body.
+
+
+func _on_wasabiboogie_finished() -> void:
+ song_2.play()
+ pass # Replace with function body.
+
+
+func _on_nd_song_finished() -> void:
+ song_3.play()
+ pass # Replace with function body.
+
+
+func _on_rd_song_finished() -> void:
+ song_1.play()
  pass # Replace with function body.

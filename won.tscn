@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwvdhfswbgxoq"]
 
-[ext_resource type="Script" uid="uid://3eclxm5fdiph" path="res://next level.gd" id="1_2goe5"]
+[ext_resource type="Script" uid="uid://banxuwhx8yalb" path="res://buttonwon.gd" id="1_2goe5"]
 
 [node name="won" type="Node2D"]
 
