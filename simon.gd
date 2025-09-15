@@ -119,3 +119,9 @@ func _on_nd_song_finished() -> void:
 func _on_rd_song_finished() -> void:
  song_1.play()
  pass # Replace with function body.
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+ position.y=1940
+ position.x=1540
+ pass # Replace with function body.
